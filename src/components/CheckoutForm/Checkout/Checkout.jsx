@@ -9,6 +9,8 @@ import {
   Divider,
   Button,
 } from "@material-ui/core";
+import AddressForm from "../AddressForm";
+import PaymentForm from "../PaymentForm";
 
 import useStyles from "./styles";
 
@@ -18,8 +20,12 @@ const Checkout = () => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
 
+  const Confirmation = () => <div>Confirmation</div>;
+
+  const Form = () => (activeStep === 0 ? <AddressForm /> : <PaymentForm />);
+
   return (
-    <div>
+    <>
       <div className={classes.toolbar} />
       <main className={classes.layout}>
         <Paper className={classes.paper}>
@@ -33,9 +39,10 @@ const Checkout = () => {
               </Step>
             ))}
           </Stepper>
+          {activeStep === steps.length ? <Confirmation /> : <Form />}
         </Paper>
       </main>
-    </div>
+    </>
   );
 };
 
