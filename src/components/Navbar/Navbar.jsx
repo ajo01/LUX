@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <AppBar position="fixed" className={classes.appBar} color="inherit">
       <Toolbar>
-        <Typography variant="h6" className={classes.title} color="inherit ">
+        <Typography variant="h6" className={classes.title} color="inherit">
           <img
             src={Icon}
             alt="Commerce.js"
