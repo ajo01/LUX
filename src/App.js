@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Products, Navbar, Cart, Checkout } from "./components";
+import { Products, Navbar, Cart, Checkout, Shopping } from "./components";
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
 
+import "./App.css";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 
@@ -51,8 +51,6 @@ const App = () => {
     setCart(cart);
   };
 
-  console.log(cart);
-
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -60,7 +58,7 @@ const App = () => {
           <Navbar totalItems={cart.total_items} />
           <Switch>
             <Route exact path="/">
-              <Products products={products} onAddToCart={handleAddToCart} />
+              <Shopping products={products} onAddToCart={handleAddToCart} />
             </Route>
             <Route exact path="/cart">
               <Cart

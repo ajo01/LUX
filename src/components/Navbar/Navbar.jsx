@@ -30,11 +30,11 @@ const Navbar = ({ totalItems }) => {
         >
           <img
             src={Icon}
-            alt="Commerce.js"
+            alt="Thrifty Logo"
             height="25px"
             className={classes.image}
           />
-          Commerce.js
+          Thrifty
         </Typography>
         <div className={classes.grow} />
         {location.pathname === "/" && (
