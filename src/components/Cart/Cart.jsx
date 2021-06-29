@@ -12,17 +12,15 @@ const Cart = ({
 }) => {
   const classes = useStyles();
 
-  const EmptyCart = () => {
-    return (
-      <Typography variant="subtitle1">
-        You have no items in your shopping cart
-        <Link to="/" className={classes.link}>
-          , start adding some items
-        </Link>
-        !
-      </Typography>
-    );
-  };
+  const EmptyCart = () => (
+    <Typography variant="subtitle1">
+      You have no items in your shopping cart
+      <Link to="/" className={classes.link}>
+        , start adding some items
+      </Link>
+      !
+    </Typography>
+  );
 
   const FilledCart = () => {
     return (
@@ -59,6 +57,8 @@ const Cart = ({
               type="button"
               variant="contained"
               color="primary"
+              component={Link}
+              to="/checkout"
             >
               Checkout
             </Button>
