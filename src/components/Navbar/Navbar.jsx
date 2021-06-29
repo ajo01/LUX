@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
-import Icon from "../../assets/commerce-icon.png";
+import Icon from "../../assets/commerce.png";
 import useStyles from "./styles";
 import { Link, useLocation } from "react-router-dom";
 
