@@ -35,12 +35,12 @@ const Checkout = ({ cart, onCaptureCheckout, error, order }) => {
         });
         setCheckoutToken(token);
       } catch (e) {
-        history.pushState("/");
+        if (activeStep !== steps.length) history.push("/");
       }
     };
 
     generateToken();
-  }, [cart]);
+  }, [cart, history, activeStep]);
 
   const nextStep = () => setActiveStep((prevStep) => prevStep + 1);
   const backStep = () => setActiveStep((prevStep) => prevStep - 1);
