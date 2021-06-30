@@ -10,16 +10,20 @@ export default makeStyles((theme) =>
       position: "relative",
       boxShadow: "none",
       outline: "none",
-      "&:hover": {
-        backgroundColor: "black",
-      },
-      overlay: {
-        position: "absolute",
-        top: "20px",
-        left: "20px",
-        color: "black",
-        backgroundColor: "white",
-      },
+      cursor: "pointer",
+    },
+    overlay: {
+      position: "absolute",
+      top: "0",
+      left: "0",
+      bottom: "0",
+      right: "0",
+      color: "white",
+      backgroundColor: "#2c3e50",
+      fontFamily: "'Poppins', sans-serif",
+    },
+    text: {
+      margin: "10%",
     },
   })
 );
