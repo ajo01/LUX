@@ -1,7 +1,7 @@
 import React from "react";
 
-const ModalView = () => {
-  return <div></div>;
+const ModalView = ({ selectedImg, setSelectedImg }) => {
+  return <div className="backdrop"></div>;
 };
 
 export default ModalView;
