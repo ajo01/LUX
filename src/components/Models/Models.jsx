@@ -12,9 +12,9 @@ const Models = () => {
     <>
       <Box my={12}>
         <Grid container justify="center" spacing={4}>
-          <Model img={Model1} />
-          <Model img={Model2} />
-          <Model img={Model3} />
+          <Model img={Model1} color="#2c3e50" />
+          <Model img={Model2} color="#f39c12" />
+          <Model img={Model3} color="#EE5A24" />
         </Grid>
       </Box>
     </>

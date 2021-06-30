@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Paper, Grid } from "@material-ui/core";
 import useStyles from "./styles";
 
-const Model = ({ img }) => {
+const Model = ({ img, color }) => {
   const classes = useStyles();
 
   const [focus, setFocus] = useState(false);
@@ -23,7 +23,7 @@ const Model = ({ img }) => {
       >
         <img className={classes.media} src={img} alt="models"></img>
         {focus && (
-          <div className={classes.overlay}>
+          <div className={classes.overlay} style={{ backgroundColor: color }}>
             <div className={classes.text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               tellus nisi, semper quis euismod eget, iaculis non magna. Nunc ut

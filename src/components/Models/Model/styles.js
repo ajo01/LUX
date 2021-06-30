@@ -19,7 +19,7 @@ export default makeStyles((theme) =>
       bottom: "0",
       right: "0",
       color: "white",
-      backgroundColor: "#2c3e50",
+
       fontFamily: "'Poppins', sans-serif",
     },
     text: {
