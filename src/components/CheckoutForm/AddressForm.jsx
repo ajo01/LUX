@@ -26,15 +26,6 @@ const AddressForm = ({ checkoutToken, next }) => {
     label: name,
   }));
 
-  const subdivisions = Object.entries(shippingSubdivisions).map(
-    ([code, name]) => ({ id: code, label: name })
-  );
-
-  const options = shippingOptions.map((shippingOp) => ({
-    id: shippingOp,
-    label: `${shippingOp.description} - (${shippingOp.formatted_with_symbol})`,
-  }));
-
   const fetchShippingCountries = async (checkoutTokenId) => {
     const { countries } = await commerce.services.localeListShippingCountries(
       checkoutTokenId
@@ -130,11 +121,13 @@ const AddressForm = ({ checkoutToken, next }) => {
                 fullWidth
                 onChange={(e) => setShippingSubdivision(e.target.value)}
               >
-                {subdivisions.map((subdivision) => (
-                  <MenuItem key={subdivision.id} value={subdivision.id}>
-                    {subdivision.label}
-                  </MenuItem>
-                ))}
+                {Object.entries(shippingSubdivisions)
+                  .map(([code, name]) => ({ id: code, label: name }))
+                  .map((item) => (
+                    <MenuItem key={item.id} value={item.id}>
+                      {item.label}
+                    </MenuItem>
+                  ))}
               </Select>
             </Grid>
 
@@ -145,11 +138,16 @@ const AddressForm = ({ checkoutToken, next }) => {
                 fullWidth
                 onChange={(e) => setShippingOption(e.target.value)}
               >
-                {options.map((op) => (
-                  <MenuItem key={op.id} value={op.id}>
-                    {op.label}
-                  </MenuItem>
-                ))}
+                {shippingOptions
+                  .map((sO) => ({
+                    id: sO.id,
+                    label: `${sO.description} - (${sO.price.formatted_with_symbol})`,
+                  }))
+                  .map((item) => (
+                    <MenuItem key={item.id} value={item.id}>
+                      {item.label}
+                    </MenuItem>
+                  ))}
               </Select>
             </Grid>
           </Grid>

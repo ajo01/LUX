@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Paper,
-  Stepper,
-  Step,
-  StepLabel,
-  Typography,
-  CircularProgress,
-  Divider,
-  Button,
-} from "@material-ui/core";
+import { Paper, Stepper, Step, StepLabel, Typography } from "@material-ui/core";
 import { commerce } from "../../../lib/commerce";
 
 import AddressForm from "../AddressForm";
@@ -31,7 +22,9 @@ const Checkout = ({ cart, onCaptureCheckout, error, order }) => {
           type: "cart",
         });
         setCheckoutToken(token);
-      } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
     };
 
     generateToken();

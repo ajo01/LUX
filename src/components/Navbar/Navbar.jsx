@@ -11,7 +11,7 @@ import Icon from "../../assets/shop.png";
 import useStyles from "./styles";
 import { Link, useLocation } from "react-router-dom";
 
-const Navbar = ({ totalItems, totalPrice }) => {
+const Navbar = ({ totalItems }) => {
   const classes = useStyles();
 
   const location = useLocation();
@@ -32,7 +32,7 @@ const Navbar = ({ totalItems, totalPrice }) => {
         >
           <img
             src={Icon}
-            alt="Thrifty Logo"
+            alt="LUX Logo"
             height="30px"
             className={classes.image}
           />
@@ -41,7 +41,7 @@ const Navbar = ({ totalItems, totalPrice }) => {
         <div className={classes.grow} />
         {location.pathname === "/" && (
           <>
-            <Typography variant="body1">{totalPrice}</Typography>
+            {/* <Typography variant="body1">{totalPrice}</Typography> */}
             <div className={classes.button}>
               <IconButton
                 component={Link}

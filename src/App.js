@@ -72,15 +72,13 @@ const App = () => {
     fetchCart();
   }, []);
 
+  console.log(cart);
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <div>
-          <Navbar
-            totalItems={cart.total_items}
-            // totalPrice={cart.subtotal.formatted_with_symbol}
-            totalPrice={"$0.00"}
-          />
+          <Navbar totalItems={cart.total_items} />
           <Switch>
             <Route exact path="/">
               <Shopping products={products} onAddToCart={handleAddToCart} />
