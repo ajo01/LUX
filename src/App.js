@@ -26,11 +26,6 @@ const App = () => {
     setCart(await commerce.cart.retrieve());
   };
 
-  useEffect(() => {
-    fetchProducts();
-    fetchCart();
-  }, []);
-
   const handleAddToCart = async (productId, quantity) => {
     const item = await commerce.cart.add(productId, quantity);
     setCart(item.cart);
@@ -50,6 +45,11 @@ const App = () => {
     const { cart } = await commerce.cart.empty();
     setCart(cart);
   };
+
+  useEffect(() => {
+    fetchProducts();
+    fetchCart();
+  }, []);
 
   console.log(cart);
 

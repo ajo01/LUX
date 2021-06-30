@@ -1,7 +1,8 @@
 Ecommerce platform made from React, MaterialUI, NodeJS
 
-commands:
-npm start
+SETUP
+Set env variables. Go to commerceJS to set up api key.
+command: npm start
 
 Todo:
 bug with showing prices in app cart.subtotal.formatted_with_symbol
