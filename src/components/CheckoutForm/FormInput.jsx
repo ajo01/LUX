@@ -5,20 +5,12 @@ import { useFormContext, Controller } from "react-hook-form";
 const FormInput = ({ name, label, required }) => {
   const { control } = useFormContext();
   return (
-    // <Grid item xs={12} sm={6}>
-    //   <Controller
-    //     as={TextField}
-    //     name={name}
-    //     control={control}
-    //     label={label}
-    //     fullWidth
-    //     required={required}
-    //   />
-    // </Grid>
     <Controller
+      render={({ field }) => (
+        <TextField {...field} label={label} fullWidth required />
+      )}
       control={control}
       name={name}
-      render={({ field }) => <TextField fullWidth label={label} required />}
     />
   );
 };
