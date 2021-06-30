@@ -38,12 +38,12 @@ const Navbar = ({ totalItems, totalPrice }) => {
             height="30px"
             className={classes.image}
           />
-          Thrifty
+          LUX
         </Typography>
         <div className={classes.grow} />
         {location.pathname === "/" && (
           <>
-            <Typography variant="h6">{totalPrice}</Typography>
+            <Typography variant="body1">{totalPrice}</Typography>
             <div className={classes.button}>
               <IconButton
                 component={Link}

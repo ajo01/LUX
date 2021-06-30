@@ -17,7 +17,7 @@ const Shopping = ({ products, onAddToCart }) => {
           variant="h3"
           gutterBottom
         >
-          THRIFTY SHOP
+          LUX SHOP
         </Typography>
         <img src={ShoppingImg} alt="Landing img" width="85%" />
         <Products products={products} onAddToCart={onAddToCart} />

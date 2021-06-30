@@ -59,7 +59,8 @@ const App = () => {
         <div>
           <Navbar
             totalItems={cart.total_items}
-            totalPrice={cart.subtotal.formatted_with_symbol}
+            // totalPrice={cart.subtotal.formatted_with_symbol}
+            totalPrice={"$0.00"}
           />
           <Switch>
             <Route exact path="/">
