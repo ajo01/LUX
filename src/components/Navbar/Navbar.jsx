@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
-import Icon from "../../assets/commerce.png";
+import Icon from "../../assets/shop.png";
 import useStyles from "./styles";
 import { Link, useLocation } from "react-router-dom";
 
@@ -19,7 +19,11 @@ const Navbar = ({ totalItems }) => {
   const location = useLocation();
 
   return (
-    <AppBar position="fixed" className={classes.appBar} color="inherit">
+    <AppBar
+      position="fixed"
+      className={classes.appBar}
+      style={{ background: "black" }}
+    >
       <Toolbar>
         <Typography
           component={Link}
@@ -31,7 +35,7 @@ const Navbar = ({ totalItems }) => {
           <img
             src={Icon}
             alt="Thrifty Logo"
-            height="25px"
+            height="30px"
             className={classes.image}
           />
           Thrifty
