@@ -51,6 +51,7 @@ const App = () => {
   const refreshCart = async () => {
     const newCart = await commerce.cart.refresh();
     setCart(newCart);
+    console.log("cart refreshed!");
   };
 
   const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {

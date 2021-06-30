@@ -41,6 +41,10 @@ const Product = ({ product, onAddToCart }) => {
           <AddShoppingCart />
         </IconButton>
       </CardActions>
+
+      {/* <Paper variant="outlined">
+<img src="https://img.ltwebstatic.com/images2_pi/2018/08/30/15356088573812032666_thumbnail_405x552.webp" />
+</Paper> */}
     </Card>
   );
 };
