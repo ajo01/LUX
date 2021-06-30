@@ -10,7 +10,7 @@ pm start
 Bugs:
 bug with showing prices in app cart.subtotal.formatted_with_symbol. Use useEffect for this
 cards in Cart seem irregular
-shipping option validation -> cart not refreshing when order confirmed
+422 error
 
 Todo:
 add images of models in cards in landing page
