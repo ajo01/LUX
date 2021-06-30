@@ -2,7 +2,10 @@ Ecommerce platform made from React, MaterialUI, NodeJS
 
 SETUP
 Set env variables. Go to commerceJS and Stripe to set up api key.
-command: npm start
+command:
+npm i
+cd src
+pm start
 
 Bugs:
 bug with showing prices in app cart.subtotal.formatted_with_symbol. Use useEffect for this

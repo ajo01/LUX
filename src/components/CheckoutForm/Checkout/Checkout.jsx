@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
+  CssBaseline,
   Paper,
   Stepper,
   Step,
@@ -43,7 +44,7 @@ const Checkout = ({ cart, onCaptureCheckout, error, order }) => {
   const nextStep = () => setActiveStep((prevStep) => prevStep + 1);
   const backStep = () => setActiveStep((prevStep) => prevStep - 1);
 
-  const next = (data) => {
+  const test = (data) => {
     setShippingData(data);
     nextStep();
   };
@@ -51,6 +52,7 @@ const Checkout = ({ cart, onCaptureCheckout, error, order }) => {
   let Confirmation = () =>
     order.customer ? (
       <>
+        <CssBaseline />
         <div>
           <Typography variant="h5">
             Thank you for your purchase, {order.customer.firstname}{" "}
@@ -86,7 +88,7 @@ const Checkout = ({ cart, onCaptureCheckout, error, order }) => {
 
   const Form = () =>
     activeStep === 0 ? (
-      <AddressForm checkoutToken={checkoutToken} next={next} />
+      <AddressForm checkoutToken={checkoutToken} test={test} />
     ) : (
       <PaymentForm
         checkoutToken={checkoutToken}

@@ -4,6 +4,7 @@ import { useFormContext, Controller } from "react-hook-form";
 
 const FormInput = ({ name, label }) => {
   const { control } = useFormContext();
+
   return (
     <Controller
       render={({ field }) => (
