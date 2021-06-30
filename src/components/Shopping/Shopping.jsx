@@ -3,6 +3,7 @@ import Products from "../Products/Products";
 import ShoppingImg from "../../assets/header.jpeg";
 import { Grid, Typography } from "@material-ui/core";
 import useStyles from "./styles";
+import Models from "../Models/Models";
 
 const Shopping = ({ products, onAddToCart }) => {
   const classes = useStyles();
@@ -20,6 +21,8 @@ const Shopping = ({ products, onAddToCart }) => {
           LUX SHOP
         </Typography>
         <img src={ShoppingImg} alt="Landing img" width="85%" />
+
+        <Models />
         <Products products={products} onAddToCart={onAddToCart} />
       </Grid>
     </>

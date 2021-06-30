@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 export default makeStyles(() => ({
   root: {
     maxWidth: "100%",
+    boxShadow: "none",
   },
   media: {
     height: 0,

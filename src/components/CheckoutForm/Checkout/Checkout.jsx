@@ -16,7 +16,7 @@ import AddressForm from "../AddressForm";
 import PaymentForm from "../PaymentForm";
 
 import useStyles from "./styles";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const steps = ["Shipping address", "Payment details"];
 
@@ -25,6 +25,7 @@ const Checkout = ({ cart, onCaptureCheckout, error, order }) => {
   const [activeStep, setActiveStep] = useState(0);
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [shippingData, setShippingData] = useState({});
+  const history = useHistory();
 
   useEffect(() => {
     const generateToken = async () => {
@@ -34,7 +35,7 @@ const Checkout = ({ cart, onCaptureCheckout, error, order }) => {
         });
         setCheckoutToken(token);
       } catch (e) {
-        console.log(e);
+        history.pushState("/");
       }
     };
 
