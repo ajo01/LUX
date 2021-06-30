@@ -48,9 +48,9 @@ const PaymentForm = ({ checkoutToken, shippingData, backStep }) => {
         },
       };
 
-      onCaptureCheckout(checkoutToken.id, orderData);
+      // onCaptureCheckout(checkoutToken.id, orderData);
 
-      nextStep();
+      // nextStep();
     }
   };
 
