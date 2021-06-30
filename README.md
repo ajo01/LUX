@@ -5,7 +5,7 @@ Set env variables. Go to commerceJS to set up api key.
 command: npm start
 
 Todo:
-bug with showing prices in app cart.subtotal.formatted_with_symbol
+bug with showing prices in app cart.subtotal.formatted_with_symbol. Use useEffect for this
 filter products
 click on product -> modal view with product details
 product.js: change card to:
