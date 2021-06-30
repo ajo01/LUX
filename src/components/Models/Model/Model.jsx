@@ -7,13 +7,20 @@ const Model = ({ img }) => {
 
   const [focus, setFocus] = useState(false);
 
-  const handleClick = () => {
-    setFocus(true);
+  const handleFocus = () => {
+    console.log("entered");
+    const prevFocus = focus;
+    setFocus(!prevFocus);
   };
 
   return (
     <Grid item>
-      <Paper className={classes.paper} variant="outline" onClick={handleClick}>
+      <Paper
+        className={classes.paper}
+        variant="outline"
+        onMouseEnter={handleFocus}
+        onMouseLeave={handleFocus}
+      >
         <img className={classes.media} src={img} alt="models"></img>
         {focus && (
           <div className={classes.overlay}>
