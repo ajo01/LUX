@@ -10,7 +10,7 @@ import {
 import { AddShoppingCart } from "@material-ui/icons";
 import useStyles from "./styles";
 
-const Product = ({ product, onAddToCart }) => {
+const Product = ({ product, onAddToCart, setSelectedImg }) => {
   const classes = useStyles();
 
   return (
@@ -19,6 +19,7 @@ const Product = ({ product, onAddToCart }) => {
         className={classes.media}
         image={product.media.source}
         title={product.name}
+        onClick={() => setSelectedImg(product.media.source)}
       />
       <CardContent>
         <div className={classes.content}>

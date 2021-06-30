@@ -27,10 +27,16 @@ const Shopping = ({ products, onAddToCart }) => {
           <img src={ShoppingImg} alt="Landing img" width="85%" />
 
           <Models />
-          <Products products={products} onAddToCart={onAddToCart} />
+          <Products
+            products={products}
+            onAddToCart={onAddToCart}
+            setSelectedImg={setSelectedImg}
+          />
         </Grid>
       </Box>
-      <ModalView />
+      {selectedImg && (
+        <ModalView selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+      )}
     </>
   );
 };
