@@ -16,6 +16,7 @@ const theme = createMuiTheme({
 const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
+  const [order, setOrder] = useState({});
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -46,12 +47,20 @@ const App = () => {
     setCart(cart);
   };
 
+  const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+    try {
+      const incomingOrder = await commerce.checkout.capture(
+        checkoutTokenId,
+        newOrder
+      );
+      setOrder(incomingOrder);
+    } catch (e) {}
+  };
+
   useEffect(() => {
     fetchProducts();
     fetchCart();
   }, []);
-
-  // console.log(cart);
 
   return (
     <ThemeProvider theme={theme}>
