@@ -18,7 +18,7 @@ import useStyles from "./styles";
 
 const steps = ["Shipping address", "Payment details"];
 
-const Checkout = ({ cart }) => {
+const Checkout = ({ cart, onCaptureCheckout, error, order }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [checkoutToken, setCheckoutToken] = useState(null);
@@ -55,6 +55,8 @@ const Checkout = ({ cart }) => {
         checkoutToken={checkoutToken}
         shippingData={shippingData}
         backStep={backStep}
+        onCaptureCheckout={onCaptureCheckout}
+        nextStep={nextStep}
       />
     );
 

@@ -8,7 +8,13 @@ import {
 import { loadStripe } from "@stripe/stripe-js";
 import Review from "./Review";
 
-const PaymentForm = ({ checkoutToken, shippingData, backStep }) => {
+const PaymentForm = ({
+  checkoutToken,
+  shippingData,
+  backStep,
+  onCaptureCheckout,
+  nextStep,
+}) => {
   const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
   const handleSubmit = async (event, elements, stripe) => {
@@ -48,9 +54,9 @@ const PaymentForm = ({ checkoutToken, shippingData, backStep }) => {
         },
       };
 
-      // onCaptureCheckout(checkoutToken.id, orderData);
+      onCaptureCheckout(checkoutToken.id, orderData);
 
-      // nextStep();
+      nextStep();
     }
   };
 
