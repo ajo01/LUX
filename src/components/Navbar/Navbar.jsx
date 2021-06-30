@@ -13,7 +13,7 @@ import Icon from "../../assets/shop.png";
 import useStyles from "./styles";
 import { Link, useLocation } from "react-router-dom";
 
-const Navbar = ({ totalItems }) => {
+const Navbar = ({ totalItems, totalPrice }) => {
   const classes = useStyles();
 
   const location = useLocation();
@@ -42,18 +42,21 @@ const Navbar = ({ totalItems }) => {
         </Typography>
         <div className={classes.grow} />
         {location.pathname === "/" && (
-          <div className={classes.button}>
-            <IconButton
-              component={Link}
-              to="/cart"
-              aria-label="Show cart items"
-              color="inherit"
-            >
-              <Badge badgeContent={totalItems} color="secondary">
-                <ShoppingCart />
-              </Badge>
-            </IconButton>
-          </div>
+          <>
+            <Typography variant="h6">{totalPrice}</Typography>
+            <div className={classes.button}>
+              <IconButton
+                component={Link}
+                to="/cart"
+                aria-label="Show cart items"
+                color="inherit"
+              >
+                <Badge badgeContent={totalItems} color="secondary">
+                  <ShoppingCart />
+                </Badge>
+              </IconButton>
+            </div>
+          </>
         )}
       </Toolbar>
     </AppBar>

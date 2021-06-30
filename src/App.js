@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Products, Navbar, Cart, Checkout, Shopping } from "./components";
+import { Navbar, Cart, Checkout, Shopping } from "./components";
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -51,11 +51,16 @@ const App = () => {
     setCart(cart);
   };
 
+  console.log(cart);
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <div>
-          <Navbar totalItems={cart.total_items} />
+          <Navbar
+            totalItems={cart.total_items}
+            totalPrice={cart.subtotal.formatted_with_symbol}
+          />
           <Switch>
             <Route exact path="/">
               <Shopping products={products} onAddToCart={handleAddToCart} />
