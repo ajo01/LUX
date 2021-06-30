@@ -7,7 +7,7 @@ command: npm start
 Bugs:
 bug with showing prices in app cart.subtotal.formatted_with_symbol. Use useEffect for this
 cards in Cart seem irregular
-cart not refreshing when order confirmed
+shipping option validation -> cart not refreshing when order confirmed
 
 Todo:
 add images of models in cards in landing page
