@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Typography, Button, Grid } from "@material-ui/core";
+import { Container, Typography, Button, Grid, Box } from "@material-ui/core";
 import useStyles from "./styles";
 import CartItem from "./CartItem/CartItem";
 import { Link } from "react-router-dom";
@@ -46,7 +46,6 @@ const Cart = ({
               size="large"
               type="button"
               variant="contained"
-              color="secondary"
               onClick={handleEmptyCart}
             >
               Empty Cart
@@ -56,7 +55,6 @@ const Cart = ({
               size="large"
               type="button"
               variant="contained"
-              color="primary"
               component={Link}
               to="/checkout"
             >
@@ -74,11 +72,12 @@ const Cart = ({
 
   return (
     <Container>
-      <div className={classes.toolbar} />
-      <Typography className={classes.title} variant="h3" gutterBottom>
-        Your Shopping Cart
-      </Typography>
-      {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
+      <Box mt={12} mb={8}>
+        <Typography className={classes.title} variant="h3" gutterBottom>
+          Your Shopping Cart
+        </Typography>
+        {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
+      </Box>
     </Container>
   );
 };

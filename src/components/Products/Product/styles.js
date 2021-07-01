@@ -1,20 +1,25 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, createStyles } from "@material-ui/core";
 
-export default makeStyles(() => ({
-  root: {
-    maxWidth: "100%",
-    boxShadow: "none",
-  },
-  media: {
-    height: 0,
-    paddingTop: "66%",
-  },
-  cardActions: {
-    display: "flex",
-    justifyContent: "flex-end",
-  },
-  cardContent: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-}));
+export default makeStyles(() =>
+  createStyles({
+    root: {
+      maxWidth: "100%",
+      boxShadow: "none",
+    },
+    media: {
+      height: 0,
+      paddingTop: "66%",
+      "&hover": {
+        zdepth: 3,
+      },
+    },
+    cardActions: {
+      display: "flex",
+      justifyContent: "flex-end",
+    },
+    cardContent: {
+      display: "flex",
+      justifyContent: "space-between",
+    },
+  })
+);

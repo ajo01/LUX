@@ -8,7 +8,6 @@ const Model = ({ img, color }) => {
   const [focus, setFocus] = useState(false);
 
   const handleFocus = () => {
-    console.log("entered");
     const prevFocus = focus;
     setFocus(!prevFocus);
   };
