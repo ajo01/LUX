@@ -82,7 +82,11 @@ const App = () => {
           <Navbar totalItems={cart.total_items} totalPrice={subtotal} />
           <Switch>
             <Route exact path="/">
-              <Shopping products={products} onAddToCart={handleAddToCart} />
+              <Shopping
+                products={products}
+                onAddToCart={handleAddToCart}
+                devModeEmpty={handleEmptyCart}
+              />
             </Route>
             <Route exact path="/cart">
               <Cart

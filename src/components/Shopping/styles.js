@@ -40,6 +40,7 @@ export default makeStyles((theme) => ({
     position: "relative",
     left: "15%",
     top: "2rem",
+    maxWidth: "70%",
   },
   title: {
     marginTop: "2rem",

@@ -6,7 +6,7 @@ import useStyles from "./styles";
 import Models from "../Models/Models";
 import ModalView from "../ModalView/ModalView";
 
-const Shopping = ({ products, onAddToCart }) => {
+const Shopping = ({ products, onAddToCart, devModeEmpty }) => {
   const classes = useStyles();
   const [selectedImg, setSelectedImg] = useState(null);
   const shopping = useRef(null);
@@ -58,6 +58,9 @@ const Shopping = ({ products, onAddToCart }) => {
       {selectedImg && (
         <ModalView selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
       )}
+
+      {/* for development mode when products are changed in commercejs and cardmedia src breaks*/}
+      {/* <button onClick={devModeEmpty}>Empty</button> */}
     </>
   );
 };
