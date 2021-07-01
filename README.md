@@ -1,6 +1,10 @@
 LUX
 Ecommerce platform made from React, MaterialUI, CommerceJS, and Stripe
 
+demo:
+
+- https://shoplux.netlify.app/
+
 Images from app:
 ![](src/assets/sample/home1.png?raw=true)
 
