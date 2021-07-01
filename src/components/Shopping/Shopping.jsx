@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Products from "../Products/Products";
 import ShoppingImg from "../../assets/header.jpeg";
 import { Grid, Typography, Box, Paper, Button } from "@material-ui/core";
@@ -9,6 +9,10 @@ import ModalView from "../ModalView/ModalView";
 const Shopping = ({ products, onAddToCart }) => {
   const classes = useStyles();
   const [selectedImg, setSelectedImg] = useState(null);
+  const shopping = useRef(null);
+
+  const handleScroll = () =>
+    shopping.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
     <>
@@ -33,18 +37,22 @@ const Shopping = ({ products, onAddToCart }) => {
                   <Typography className={classes.textH5} variant="h5">
                     See our bestsellers from June!
                   </Typography>
-                  <Button className={classes.button}>{"Shop Now >"} </Button>
+                  <Button className={classes.button} onClick={handleScroll}>
+                    {"Shop Now >"}{" "}
+                  </Button>
                 </div>
               </div>
             </Paper>
           </div>
 
           <Models />
-          <Products
-            products={products}
-            onAddToCart={onAddToCart}
-            setSelectedImg={setSelectedImg}
-          />
+          <div ref={shopping}>
+            <Products
+              products={products}
+              onAddToCart={onAddToCart}
+              setSelectedImg={setSelectedImg}
+            />
+          </div>
         </Grid>
       </Box>
       {selectedImg && (

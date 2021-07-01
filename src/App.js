@@ -73,7 +73,7 @@ const App = () => {
   }, []);
 
   console.log(cart);
-  console.log(subtotal);
+  // console.log(subtotal);
 
   return (
     <ThemeProvider theme={theme}>
