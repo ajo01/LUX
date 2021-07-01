@@ -7,10 +7,17 @@ export default makeStyles((theme) => ({
     width: "150px",
     padding: "7px",
     fontSize: "1.2rem",
+    marginTop: "5rem",
   },
   center: {
     width: "100%",
     textAlign: "center",
+  },
+  textH4: {
+    paddingTop: "2rem",
+  },
+  textH5: {
+    paddingTop: "5px",
   },
   overlay: {
     position: "absolute",

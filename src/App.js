@@ -72,18 +72,6 @@ const App = () => {
     fetchCart();
   }, []);
 
-  // useEffect(() => {
-  //   const fetchSubtotal = async () => {
-  //     fetchCart().then(() => {
-  //       cart.subtotal.formatted_with_symbol == null
-  //         ? setSubtotal("$0.00")
-  //         : setSubtotal(cart.subtotal.formatted_with_symbol);
-  //     });
-  //   };
-
-  //   fetchSubtotal();
-  // }, [cart.subtotal]);
-
   console.log(cart);
   console.log(subtotal);
 

@@ -41,7 +41,7 @@ const Navbar = ({ totalItems, totalPrice }) => {
         <div className={classes.grow} />
         {location.pathname === "/" && (
           <>
-            <Typography variant="body1">{totalPrice}</Typography>
+            {/* <Typography variant="body1">{totalPrice}</Typography> */}
             <div className={classes.button}>
               <IconButton
                 component={Link}

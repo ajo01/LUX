@@ -26,15 +26,15 @@ const Shopping = ({ products, onAddToCart }) => {
               <img src={ShoppingImg} alt="Landing img" width="90%" />
               <div className={classes.overlay}>
                 <div className={classes.textGroup}>
-                  <Typography variant="h3">Live with style </Typography>
-                  <Typography variant="h4">
+                  <Typography variant="h3">Live with style</Typography>
+                  <Typography className={classes.textH4} variant="h4">
                     Luxury Clothes Designed for Maximum Comfort
                   </Typography>
-                  <Typography variant="h5">
+                  <Typography className={classes.textH5} variant="h5">
                     See our bestsellers from June!
                   </Typography>
+                  <Button className={classes.button}>{"Shop Now >"} </Button>
                 </div>
-                <Button className={classes.button}>{"Shop Now >"} </Button>
               </div>
             </Paper>
           </div>
