@@ -22,7 +22,12 @@ const Model = ({ img, color }) => {
       >
         <img className={classes.media} src={img} alt="models"></img>
         {focus && (
-          <div className={classes.overlay} style={{ backgroundColor: color }}>
+          <div
+            className={classes.overlay}
+            style={{
+              backgroundColor: color,
+            }}
+          >
             <div className={classes.text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               tellus nisi, semper quis euismod eget, iaculis non magna. Nunc ut

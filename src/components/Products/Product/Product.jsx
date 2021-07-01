@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardMedia,
@@ -13,8 +13,14 @@ import useStyles from "./styles";
 const Product = ({ product, onAddToCart, setSelectedImg }) => {
   const classes = useStyles();
 
+  const [raised, setRaised] = useState(false);
+
   return (
-    <Card className={classes.root}>
+    <Card
+      className={raised ? classes.cardHovered : classes.root}
+      onMouseOver={() => setRaised(true)}
+      onMouseOut={() => setRaised(false)}
+    >
       <CardMedia
         className={classes.media}
         image={product.media.source}

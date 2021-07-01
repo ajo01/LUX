@@ -9,9 +9,6 @@ export default makeStyles(() =>
     media: {
       height: 0,
       paddingTop: "66%",
-      "&hover": {
-        zdepth: 3,
-      },
     },
     cardActions: {
       display: "flex",
@@ -20,6 +17,12 @@ export default makeStyles(() =>
     cardContent: {
       display: "flex",
       justifyContent: "space-between",
+    },
+    cardHovered: {
+      maxWidth: "100%",
+      boxShadow: "none",
+      transform: "scale3d(1.07, 1.07, 1)",
+      transition: "transform .2s ease-in-out",
     },
   })
 );

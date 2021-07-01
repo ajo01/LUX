@@ -12,7 +12,6 @@ bug with showing prices in app cart.subtotal.formatted_with_symbol. Use useEffec
 422 error
 
 Todo:
-validation for form data
-filter products
+filter products on Shopping
 click on product -> modal view with product details
-integrate AuthO
+integrate AuthO user
