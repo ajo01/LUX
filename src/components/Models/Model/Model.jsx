@@ -16,7 +16,6 @@ const Model = ({ img, color }) => {
     <Grid item>
       <Paper
         className={classes.paper}
-        variant="outline"
         onMouseEnter={handleFocus}
         onMouseLeave={handleFocus}
       >

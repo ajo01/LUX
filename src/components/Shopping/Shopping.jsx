@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Products from "../Products/Products";
 import ShoppingImg from "../../assets/header.jpeg";
-import { Grid, Typography, Box } from "@material-ui/core";
+import { Grid, Typography, Box, Paper, Button } from "@material-ui/core";
 import useStyles from "./styles";
 import Models from "../Models/Models";
 import ModalView from "../ModalView/ModalView";
@@ -21,7 +21,15 @@ const Shopping = ({ products, onAddToCart }) => {
               LUX SHOP
             </Typography>
           </div>
-          <img src={ShoppingImg} alt="Landing img" width="85%" />
+          <div className={classes.center}>
+            <Paper className={classes.paper}>
+              <img src={ShoppingImg} alt="Landing img" width="90%" />
+              <div className={classes.overlay}>
+                Overlay
+                <Button className={classes.button}>Shop Now</Button>
+              </div>
+            </Paper>
+          </div>
 
           <Models />
           <Products

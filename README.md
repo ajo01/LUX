@@ -17,7 +17,9 @@ Images from app:
 SETUP
 
 - Set env variables. Go to commerceJS and Stripe to set up api key.
-  command:
+
+Command:
+
 - npm i
 - cd src
 - npm start
@@ -29,6 +31,7 @@ Bugs:
 
 Todo:
 
+- landing page - create sliding images
 - filter products in Shopping component
 - modal view with product details
 - integrate AuthO user
