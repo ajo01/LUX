@@ -16,14 +16,11 @@ const Shopping = ({ products, onAddToCart }) => {
         <div className={classes.toolbar} />
 
         <Grid container justify="center" spacing={2}>
-          <Typography
-            className={classes.title}
-            align="center"
-            variant="h3"
-            gutterBottom
-          >
-            LUX SHOP
-          </Typography>
+          <div className={classes.center}>
+            <Typography className={classes.title} variant="h3" gutterBottom>
+              LUX SHOP
+            </Typography>
+          </div>
           <img src={ShoppingImg} alt="Landing img" width="85%" />
 
           <Models />
