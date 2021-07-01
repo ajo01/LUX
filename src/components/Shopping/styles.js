@@ -15,18 +15,24 @@ export default makeStyles((theme) => ({
   overlay: {
     position: "absolute",
     top: "0",
-    left: "5%",
+    left: "0",
     bottom: "0",
-    right: "5%",
+    right: "0",
     color: "white",
     fontFamily: "'Poppins', sans-serif",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
   },
   paper: {
     position: "relative",
     boxShadow: "none",
     outline: "none",
-    cursor: "pointer",
+  },
+  textGroup: {
+    fontFamily: "Arial, Helvetica, sans-serif",
+    textAlign: "left",
+    position: "relative",
+    left: "15%",
+    top: "2rem",
   },
   title: {
     marginTop: "2rem",

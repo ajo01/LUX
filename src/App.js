@@ -18,6 +18,7 @@ const App = () => {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMsg, setErrorMsg] = useState("");
+  const [subtotal, setSubtotal] = useState("$0.00");
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -71,13 +72,26 @@ const App = () => {
     fetchCart();
   }, []);
 
+  // useEffect(() => {
+  //   const fetchSubtotal = async () => {
+  //     fetchCart().then(() => {
+  //       cart.subtotal.formatted_with_symbol == null
+  //         ? setSubtotal("$0.00")
+  //         : setSubtotal(cart.subtotal.formatted_with_symbol);
+  //     });
+  //   };
+
+  //   fetchSubtotal();
+  // }, [cart.subtotal]);
+
   console.log(cart);
+  console.log(subtotal);
 
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <div>
-          <Navbar totalItems={cart.total_items} />
+          <Navbar totalItems={cart.total_items} totalPrice={subtotal} />
           <Switch>
             <Route exact path="/">
               <Shopping products={products} onAddToCart={handleAddToCart} />

@@ -6,7 +6,6 @@ demo:
 - https://shoplux.netlify.app/
 
 Images from app:
-![](src/assets/sample/home1.png?raw=true)
 
 ![](src/assets/sample/home2.png?raw=true)
 
