@@ -13,6 +13,14 @@ Images from app:
 
 ![](src/assets/sample/products.png?raw=true)
 
+```
+SETUP WITH DOCKER
+git clone git@github.com:ajo01/LUX.git
+cd LUX
+docker build -t lux-ecommerce .
+docker run -p 8080:3000 lux-ecommerce
+Go to http://localhost:8080
+
 SETUP
 
 - Set env variables. Go to commerceJS and Stripe to set up api key.
@@ -23,10 +31,7 @@ Command:
 - cd src
 - npm start
 
-Bugs:
 
-- bug with showing prices in app cart.subtotal.formatted_with_symbol. Use useEffect for this
-- 422 error
 
 Todo:
 
@@ -34,3 +39,4 @@ Todo:
 - filter products in Shopping component
 - modal view with product details
 - integrate AuthO user
+```
