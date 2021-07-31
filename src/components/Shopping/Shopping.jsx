@@ -27,14 +27,20 @@ const Shopping = ({ products, onAddToCart, devModeEmpty }) => {
           </div>
           <div className={classes.center}>
             <Paper className={classes.paper}>
-              <img src={ShoppingImg} alt="Landing img" width="90%" />
+              <img
+                src={ShoppingImg}
+                alt="Landing img"
+                className={classes.landingImg}
+              />
               <div className={classes.overlay}>
                 <div className={classes.textGroup}>
-                  <Typography variant="h3">Live with style</Typography>
-                  <Typography className={classes.textH4} variant="h4">
+                  <Typography className={classes.textH3}>
+                    Live with style
+                  </Typography>
+                  <Typography className={classes.textH4}>
                     Luxury Clothes Designed for Maximum Comfort
                   </Typography>
-                  <Typography className={classes.textH5} variant="h5">
+                  <Typography className={classes.textH5}>
                     See our bestsellers from June!
                   </Typography>
                   <Button className={classes.button} onClick={handleScroll}>

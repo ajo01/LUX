@@ -21,17 +21,12 @@ docker build -t lux-ecommerce .
 docker run -p 8080:3000 lux-ecommerce
 Go to http://localhost:8080
 
-SETUP
+SETUP WITHOU DOCKER
 
 - Set env variables. Go to commerceJS and Stripe to set up api key.
-
-Command:
-
 - npm i
 - cd src
 - npm start
-
-
 
 Todo:
 

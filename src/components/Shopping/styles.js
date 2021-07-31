@@ -8,16 +8,15 @@ export default makeStyles((theme) => ({
     padding: "7px",
     fontSize: "1.2rem",
     marginTop: "5rem",
+    marginBottom: "30px",
   },
   center: {
     width: "100%",
     textAlign: "center",
   },
-  textH4: {
-    paddingTop: "2rem",
-  },
-  textH5: {
-    paddingTop: "5px",
+  landingImg: {
+    width: "100%",
+    minHeight: "350px",
   },
   overlay: {
     position: "absolute",
@@ -41,6 +40,17 @@ export default makeStyles((theme) => ({
     left: "15%",
     top: "2rem",
     maxWidth: "70%",
+  },
+  textH3: {
+    fontSize: "calc(12px + 3vw)",
+  },
+  textH4: {
+    paddingTop: "2rem",
+    fontSize: "calc(12px + 1.5vw)",
+  },
+  textH5: {
+    paddingTop: "5px",
+    fontSize: "calc(12px + 1vw)",
   },
   title: {
     marginTop: "2rem",
