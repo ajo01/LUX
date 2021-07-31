@@ -3,7 +3,7 @@ Ecommerce platform made from React, MaterialUI, CommerceJS, and Stripe
 
 demo:
 
-- https://shopluxv2.netlify.app
+- https://shoplux.netlify.app/
 
 Images from app:
 
