@@ -7,8 +7,8 @@ export default makeStyles((theme) => ({
     width: "150px",
     padding: "7px",
     fontSize: "1.2rem",
-    marginTop: "5rem",
-    marginBottom: "30px",
+    marginTop: "5vw",
+    marginBottom: "4vw",
   },
   center: {
     width: "100%",
